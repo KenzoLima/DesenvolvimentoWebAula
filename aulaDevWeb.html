@@ -1,54 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark Souls</title>
-
-    <!-- Inclua os metadados comuns (título na aba do navegador, ícone, codificação, idioma) -->
+    <link rel="icon" href="https://vignette.wikia.nocookie.net/darksouls/images/e/e8/Bonfire.png" type="image/x-icon">
 </head>
 
 <body>
-    <center>
-        <h1>Dark Souls</h1>
-    </center>
-    <center>
-        <h2>⚔️Minha Experiência TENEBROSA💕</h2>
-    </center>
+    <header>
+        <center>
+            <h1>Dark Souls</h1>
+            <h2>⚔️ Minha Experiência TENEBROSA 💕</h2>
+
+            <nav>
+
+                <a href="#midias">Pular para imagens do jogo</a>
+        </center>
+        </nav>
+    </header>
     <hr>
 
-    <h3>Conquistas mais amarguradas:</h3>
-    <p>Todas essas que eu vou listar a seguir foram muito difíceis mas quando alcaçadas trouxeram muita satisfação.</p>
-    <ul>
-        <li>Honra do Cavaleiro</li>
-        <li>Arte de Trilhar o Abismo</li>
-        <li>Derrota de Priscilla a Mestiça</li>
-        <li>Erudição do Sábio:</li>
-        <li>Caminho do Dragão:</li>
-    </ul>
+    <main>
+        <section id="conquistas">
+            <h3>Conquistas mais amarguradas:</h3>
+            <p>Todas essas que eu vou listar a seguir foram muito difíceis mas quando alcançadas trouxeram muita
+                satisfação. O mundo de Lordran pode ser cruel e exigiu muita paciência!
+            </p>
+
+            <ul>
+                <li>Honra do Cavaleiro</li>
+                <li>Arte de Trilhar o Abismo</li>
+                <li>Derrota de Priscilla a Mestiça</li>
+                <li>Erudição do Sábio</li>
+                <li>Caminho do Dragão</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="chefes">
+            <h3>Top melhores Bosses:</h3>
+            <p>Esses são os melhores chefes que esse incrível jogo nos apresenta.</p>
+            <ol>
+                <li>Ornstein e Smough</li>
+                <li>Grande Lobo Cinza Sif</li>
+                <li>Priscilla a Mestiça</li>
+                <li>Seath o Descamado</li>
+                <li>Os Quatro Reis</li>
+            </ol>
+            
+
+            <p id="video-boss">Veja um trecho da luta contra Ornstein e Smough:</p>
+            <!-- Iframe para abrir vídeo dentro da janela e dimensioná-la -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GC2XNrQyr7Q"
+                title="Luta contra Ornstein e Smough" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <hr>
+
+        <section id="midias">
+            <h3>Visuais de Lordran</h3>
+            <p>Burgo dos mortos visvo: Ruínas do que jjá foi uma cidade próspera, repleta de inimigos escondidos e passagens secretas. A ambientação feita nesse mapa é excelente</p>
+            <img src="assets/undead burg.webp" alt="Imagem de trecho do mapa Burgo dos mortos vivos" width="600">
+
+            <p>Chegada à Anorlondo: após passar por locais que emanam podridaão e morte, ter essa vista foi de arrepiar</p>
+            <img src="assets/anorlondo.webp" alt"Chegada à Anorlondo" width="600">
+        </section>
+    </main>
+
     <hr>
 
-    <h3>Top melhores Bosses:</h3>
-    <ol>
-        <li>Ornstein e Smough</li>
-        <li>Grande Lobo Cinza Sif</li>
-        <li>Priscilla a Mestiça</li>
-        <li>Seath o Descamado</li>
-        <li>Os Quatro Reis</li>
-    </ol>
-
-    <p>Observe um trecho da luta contra Ornstrin e Smough</p>
-
-    <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-    title="YouTube video player"
-    frameborder="0"
-    allowfullscreen>
-    </iframe>
-    <hr>
-
+    <footer>
+        <center>
+            <p>Para saber mais sobre a Lore, visite a
+                <a href="https://darksouls.fandom.com/wiki/Dark_Souls_Wiki" target="_blank"
+                    rel="noopener noreferrer">Wiki Oficial de Dark Souls</a>.
+            </p>
+            <p>Página criada por Kenzo L. Yamamoto</p>
+            <p>apenas um fã de Souls Like</p>
+        </center>
+    </footer>
 </body>
+
 </html>
