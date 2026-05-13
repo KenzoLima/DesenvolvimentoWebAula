@@ -1,0 +1,36 @@
+h1{
+    color: #2E4000;
+    align-items: center;
+}
+h2{
+    color: #720000;
+}
+
+.subtitulo{
+    color: #45050c;
+}
+
+body{
+    background-color: #7e8c54;
+}
+
+section{
+    background-color: #E2D58B;
+    align-items: center;
+    padding: auto;
+    width: 40%;
+    border: 2px dashed #45050c;
+    padding: 1%;
+    border-radius: 3%;
+}
+
+.div1{
+    section{
+    background-color: #E2D58B;
+    padding: auto;
+    width: 40%;
+    border: 2px dashed #45050c;
+    padding: 1%;
+    border-radius: 3%;
+}
+}
