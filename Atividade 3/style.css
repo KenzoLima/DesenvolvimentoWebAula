@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* --- HEADER --- */
+header {
+    position: relative;
+    width: 100%;
+    background-color: #031519;
+    padding: 25px 0;
+    /* Alterado: Flexbox utilizado para centralizar o conteúdo do header (Requisito 2) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    text-align: center;
+    color: #108D95;
+}
+
+.icon {
+    /* Alterado: Position utilizado para fixar a logo no canto enquanto o flexbox centraliza o título (Requisito 2) */
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #106F75;
+}
+
+/* --- MAIN E PRODUTOS --- */
+main {
+    padding: 40px 20px;
+}
+
+section {
+    /* Alterado: Grid utilizado como exigido para alinhar os cards (Requisito 2) */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Alterado: Estilização unificada na classe .card em vez de IDs separados (Requisitos 2 e 4) */
+.card {
+    background-color: #062D32;
+    color: #6BA4BF;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    
+    /* Alterado: Flexbox interno no card para garantir que o botão fique sempre no fundo, independente do tamanho do texto (Requisito 2) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Alterado: Animação e transição aplicadas aos cards (Requisito 5) */
+    animation: fadeIn 0.8s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Alterado: Animação de hover para interação do usuário (Requisito 5) */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+/* Alterado: Estilização do novo título (Requisito 4) */
+.card h2 {
+    margin-bottom: 15px;
+    color: #108D95;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Alterado: Estilização da nova descrição (Requisito 4) */
+.card p {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #f4f4f4;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    /* Alterado: marginTop auto empurra o preço e o botão para o final do card no layout flexbox (Requisito 2) */
+    margin-top: auto; 
+}
+
+button {
+    background-color: #106F75;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #108D95;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #031519;
+    color: #6BA4BF;
+    margin-top: 40px;
+}
+
+footer hr {
+    border-color: #106F75;
+    margin-bottom: 10px;
+}
+
+/* --- ALTERAÇÕES NOVAS: ANIMAÇÕES E RESPONSIVIDADE (Requisito 5) --- */
+
+/* Alterado: Keyframes para a animação de entrada da página */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Alterado: Media Query para dispositivos móveis - muda o layout para coluna (Requisito 5) */
+@media (max-width: 768px) {
+    section {
+        grid-template-columns: 1fr; /* Transforma o Grid de 3 colunas em 1 coluna */
+    }
+    
+    header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .icon {
+        position: static; /* Remove o position absolute em telas pequenas para evitar sobreposição */
+        transform: none;
+        margin-bottom: 15px;
+    }
+}
